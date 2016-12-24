@@ -1,0 +1,22 @@
+/*
+match number: 4;
+Array: ['1', '4', '5', '7', '9', '12']
+
+4 is in 2nd positionand since arrays start at 0, the answer will be 1. 
+*/
+
+var a = 4;
+var arr = ['1', '4', '5', '7', '9', '12']
+var i = 0;
+var counter = 0;
+    
+    while(i < arr.length) {
+        if (arr[i] != a) {
+            counter++;
+            i++;
+        }    
+        else {break;}
+    }
+    
+    console.log(counter);
+    
