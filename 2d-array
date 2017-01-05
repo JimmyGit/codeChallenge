@@ -1,0 +1,87 @@
+/**
+You're given a square: 
+
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+
+Make an Hourglass out of the square and total the sum of the numbers.
+
+Example of all the hourglasses within this 6x6 array
+1 1 1   1 1 0   1 0 0   0 0 0
+  1       0       0       0
+1 1 1   1 1 0   1 0 0   0 0 0
+
+0 1 0   1 0 0   0 0 0   0 0 0
+  1       1       0       0
+0 0 2   0 2 4   2 4 4   4 4 0
+
+1 1 1   1 1 0   1 0 0   0 0 0
+  0       2       4       4
+0 0 0   0 0 2   0 2 0   2 0 0
+
+0 0 2   0 2 4   2 4 4   4 4 0
+  0       0       2       0
+0 0 1   0 1 2   1 2 4   2 4 0
+
+Hourglass with the highest sum(19) : 
+2 4 4
+  2
+1 2 4
+
+Display 19
+
+**/
+
+    var arr = 
+          [ [ 1, 1, 1, 0, 0, 0 ],
+          [ 0, 1, 0, 0, 0, 0 ],
+          [ 1, 1, 1, 0, 0, 0 ],
+          [ 0, 0, 2, 4, 4, 0 ],
+          [ 0, 0, 0, 2, 0, 0 ],
+          [ 0, 0, 1, 2, 4, 0 ] ];
+    
+    var counter = 3;
+    var sum = 0;
+    var max;
+    var hcounter = 0;
+    var vcounter = 0;
+    
+    
+    //Hourglass
+    var top = 0;
+    var bottom = top + 2;
+    var middle = 1;
+
+    while (vcounter < 4 ) {
+        while (hcounter < 4) {
+
+            for ( var i = hcounter; i <= hcounter+2; i++) {
+
+                sum += parseInt(arr[top][i]);
+                sum += parseInt(arr[bottom][i]);
+            }
+            
+            sum += parseInt(arr[middle][i-2]);
+            if (vcounter == 0 && hcounter == 0) { max = sum }
+            max = Math.max(max, sum);
+            
+            sum = 0
+            hcounter++;
+        }
+
+        hcounter = 0;
+        vcounter++; 
+        top++;
+        bottom++;
+        middle++
+        
+    
+        
+    }
+        
+    console.log(max);
+    
