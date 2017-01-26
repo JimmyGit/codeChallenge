@@ -1,0 +1,66 @@
+/******
+Three Columns 
+
+All:
+100% height
+
+Left and Right column: 200px
+
+Middle column: fills in the rest
+
+If you close the window down to 400, the middle column will disappear and only the left and right columns will appear next to each other.
+
+
+*******/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Three Columns</title>
+	<style>
+html, body { 
+  height: 100%; 
+  padding: 0;
+  margin: 0;
+}
+
+body {position: relative;}
+
+.left {
+  background-color: red;
+  left: 0;
+}
+
+.mid {
+  background-color: #fff;
+  width:100%;
+}
+
+.right {
+  background-color: blue;
+  right: 0;
+}
+
+.u-200 {width: 200px;}
+
+/*.u-fl {float: left;} */
+
+.u-fixed {position: fixed;}
+
+.u-ab {position: absolute;}
+
+.u-rel { position: relative;}
+
+.u-100pct-height { height: 100%;}
+	</style>
+</head>
+<body>
+	<div class="left u-200 u-fixed u-100pct-height"></div>
+	<div class="mid  u-100pct-height">
+		<div class="right u-200 u-ab u-100pct-height"></div>
+	</div>
+	
+</body>
+</html>
