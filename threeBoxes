@@ -1,0 +1,59 @@
+/**************
+Three nested divs of different height and width.
+Each div is centered vertically and horizontally
+*************/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 3 boxes</title>
+
+	<style>
+		html { height: 100%; }
+		body {
+			position: relative;
+			height: 100%;
+		}
+		
+		div { 
+			margin: 0 auto; 
+			position: relative;
+			top: 50%;
+      -ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+		.outer {
+			height: 500px;
+			width: 500px;
+			background-color: blue;
+		}
+
+		.mid {
+			height: 450px;
+			width: 300px;
+			background-color: #fff;
+		}
+
+		.center {
+			height: 150px;
+			width: 200px;
+			background-color: red;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="mid">
+			<div class="center"></div>
+		</div>
+
+	<div>
+</body>
+</html>
