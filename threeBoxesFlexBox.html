@@ -1,0 +1,51 @@
+/********************
+
+Center 3 nested div vertically and horizontally
+
+*********************/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex Box</title>
+
+	<style>
+
+		div {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		.outer {
+			background-color: red;
+			width: 500px;
+			height: 500px;
+		}
+
+		.inner {
+			background-color: #fff;
+			height: 400px;
+			width: 250px;
+		}
+
+		.center {
+			background-color:blue;
+			width: 200px;
+			height: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner">
+			<div class="center"></div>
+		</div>
+	</div>
+
+</body>
+</html>
