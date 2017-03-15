@@ -4,12 +4,18 @@ Input given is:
 64630 11735 14216 99233 14470 4978 73429 38120 51135 67060
 
 10 is  total numbers
+
+Find:
+mean
+median
+mode
+
 **/
     
-    var input = ['10', '64630 11735 14216 99233 14470 4978 73429 38120 51135 67060'];
+    var input = '10\n64630 11735 14216 99233 14470 4978 73429 38120 51135 67060';
     
-    // input was provided in a different way
-    // input = input.split("\n");
+
+    input = input.split("\n");
     
     
     var length = parseInt(input[0]);
