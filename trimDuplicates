@@ -1,0 +1,38 @@
+/*******
+abbc => ac 
+
+abbac => aac => c
+
+edabbadc => edaadc => eddc => ec
+*******/
+
+function removeDuplicate(arr) {
+  arr = arr.split("");
+  var counter = 0;
+  var j = 1;
+  var i = 0;
+
+  if(counter == 0) {
+    while (i < arr.length) {
+      if (arr[i] == arr[j]) {
+        var dupe = arr[i];
+        arr.splice(i, 1);
+        var second = arr.indexOf(dupe)
+        arr.splice(second, 1);
+        counter++;
+      }
+
+      if(counter > 0) {
+        counter = 0;
+        i = -1;
+        j = 0;
+      }
+
+      j++;
+      i++;
+    }
+  }
+  console.log(arr);
+}
+
+removeDuplicate(arr);
